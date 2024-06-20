@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+  <!-- swiper cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <title>|| 대흥알엔티 DQMS 로그인 ||</title>
+</head>
+
+<body>
+  <div class="container">
+    <ul class="panels">
+      <li><img class="main-bg" src="./image/main_bg1.png" alt=""></li>
+      <li><img class="main-bg" src="./image/main_bg2.png" alt=""></li>
+      <li><img class="main-bg" src="./image/main_bg3.png" alt=""></li>
+      <li><img class="main-bg" src="./image/main_bg4.png" alt=""></li>
+      <li><img class="main-bg" src="./image/main_bg5.png" alt=""></li>
+    </ul>
+    <div class="mobile-panel"><img src="./image/main_bg4.jpg" alt=""></div>
+    <div class="main-bg__filter"></div>
+    <div class="login-section__container">
+      <div class="login-section">
+        <p class="logo__container"><img src="image/logo.png" alt="logo"></p><span class="sublogo"><img
+            src="./image/qms_text.png" alt=""></span>
+        <div class="login-input"><input type="text" placeholder="User ID"><input type="password"
+            placeholder="Password"><a class="login-btn" href="#">LOGIN</a></div>
+        <div class="login-more">
+          <div class="save-id"><input type="checkbox"><span>ID 저장</span></div>
+          <div class="sign-in"><img class="icon" src="image/signin.png" alt="signin icon"><a
+              href="#"><span>사용자등록</span></a></div>
+        </div>
+        <div class="notice">
+          <p class="notice__phrase">QMS 시스템의 정보는 당사 업무처리 이외의 사용 및 외부 유출을 절대 금하며 회사의 사전 승인없이 유출 시 형사처벌등의 법적 조치를 받을 수
+            있습니다.</p>
+          <p class="notice__copyright">Copyright ⓒ 2024 CHUNGWOO Co.,
+            Ltd. ALL RIGHTS RESERVED.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script>
+
+    //배경화면 롤링
+    const bgSection = document.querySelector('.bgSection');
+    const bgMobile = document.querySelector('.bgMobile');
+    const panels = document.querySelectorAll('.panels li');
+
+    const len = panels.length - 1;
+    const interval = 5000;
+    let vsNum = 0;
+    let timer = null;
+
+
+    window.onload = () => {
+      startRolling();
+    };
+
+
+    //패널 활성화함수
+    function activation(index) {
+      for (const el of panels) el.classList.remove('on');
+      panels[index].classList.add('on');
+      vsNum = index;
+    }
+
+    //롤링함수
+    function rolling() {
+      vsNum < len ? vsNum++ : (vsNum = 0);
+      activation(vsNum);
+    }
+
+    //롤링 시작 함수
+    function startRolling() {
+      activation(vsNum);
+      timer = setInterval(rolling, interval);
+    }
+
+
+  </script>
+</body>
+
+</html>
