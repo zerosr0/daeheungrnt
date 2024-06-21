@@ -270,11 +270,18 @@ select:valid {
 
 @media screen and (max-width: 1180px) {
   .main-bg {
-    object-position: 0px 10%;
+    object-position: 20% 10%;
+  }
+
+  .login-section__container {
+    top: 13%;
+    left: 0;
+    width: 40%;
+    height: 75%;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .icon {
     width: 17px;
   }
@@ -291,6 +298,7 @@ select:valid {
     width: 370px;
     height: 70%;
     min-height: 450px;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -300,8 +308,8 @@ select:valid {
   }
 
   .logo__container {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
   }
 
   .logo__container::after {
@@ -309,7 +317,16 @@ select:valid {
   }
 
   .logo__container img {
-    width: 80px;
+    width: 120px;
+  }
+
+  .sublogo img {
+    transform: scale(0.8);
+  }
+
+  .login-input {
+    transform: scale(0.9);
+    margin: 15px auto;
   }
 
   .sign-in a span {
