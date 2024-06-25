@@ -98,7 +98,7 @@ li {
 
 .logo__container {
   position: relative;
-  width: 160px;
+  width: 170px;
   height: 150px;
   border-radius: 50%;
   background: #fff;
@@ -131,7 +131,6 @@ li {
 }
 
 .login-input {
-  display: block;
   width: 290px;
   margin: 30px auto;
 }
@@ -145,6 +144,7 @@ input[type="password"] {
   border-radius: 5px;
   margin-bottom: 8px;
   padding-left: 10px;
+  font-family: "Montserrat", sans-serif;
 }
 
 .login-btn {
@@ -154,18 +154,55 @@ input[type="password"] {
   margin-left: 5px;
   color: #fff;
   width: 90px;
-  height: 80px;
+  height: 78px;
   background-color: #181E3F;
   border-radius: 5px;
 }
 
+.login-more {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.find-id a {
+  font-size: 14px;
+  color: #181E3F;
+  text-decoration: underline;
+}
+
+.find-id a:hover {
+  color: #777;
+}
+
+.login-input .save-id {
+  display: flex;
+  align-items: center;
+}
+
+.login-input .save-id span {
+  font-size: 13.5px;
+}
+
+.select__container {
+  display: flex;
+  width: 290px;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.lang-text {
+  position: relative;
+  font-size: 14px;
+}
+
 select {
-  width: 180px;
+  width: 192px;
   height: 25px;
-  float: left;
   border: 1px solid #999;
   border-radius: 4px;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
 }
 
 select:valid {
@@ -173,33 +210,48 @@ select:valid {
   color: #777;
 }
 
-.login-more {
+.regist {
   width: 290px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.login-more .save-id {
-  font-size: 14px;
-}
+
 
 .sign-in {
+  width: 100%;
+  height: 30px;
+  background-color: #181E3F;
+  border-radius: 5px;
+}
+
+.sign-in a {
+  display: block;
+  height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .sign-in img {
+  width: 19px;
   margin-right: 5px;
 }
 
 .sign-in a span {
+  color: #fff;
   font-size: 14px;
-  color: #000;
+  letter-spacing: 1px;
 }
 
-.sign-in a span:hover {
-  color: crimson;
+.sign-in a:hover span {
+  color: #ddd;
+}
+
+input[type="checkbox"],
+.sign-in img {
+  margin-right: 5px;
 }
 
 .icon {
