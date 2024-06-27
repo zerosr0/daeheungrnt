@@ -95,38 +95,9 @@ li {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  align-items: center;
-  margin: 0 auto;
-}
-
-.logo__container {
-  position: relative;
-  width: 170px;
-  height: 150px;
-  border-radius: 50%;
-  background: #fff;
-  display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.logo__container img {
-  width: 130px;
-  animation: logoSizeChange 1.5s ease 1;
-}
-
-.logo__container::after {
-  display: block;
-  content: '';
-  position: absolute;
-  top: 85%;
-  left: 5%;
-  z-index: 3;
-  width: 90%;
-  height: 2px;
-  background-color: #ddd;
-  animation: fadeIn 2.5s ease 1;
+  margin: 0 auto;
 }
 
 .sublogo {
@@ -372,19 +343,6 @@ input[type="checkbox"],
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  .logo__container {
-    width: 130px;
-    height: 130px;
-  }
-
-  .logo__container::after {
-    display: none;
-  }
-
-  .logo__container img {
-    width: 120px;
   }
 
   .sublogo img {
